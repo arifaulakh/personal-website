@@ -8,6 +8,7 @@ I'm currently an undergrad at the University of Toronto studying math, computer 
   * Make things **bold** or *italic*
   * Embed snippets of `code`
   * Create [links](/)
+  * Testing vercel deployments
 
 ### My goals for 2023:
 
