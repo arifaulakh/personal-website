@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "../styles/globals.css";
+import Socials from "../components/Socials";
 
 export default function RootLayout({
   children,
@@ -22,16 +23,18 @@ export default function RootLayout({
   const footer = (
     <footer>
     <div className="mt-6 py-6 text-center text-slate-400 hover:underline">
+      <Socials></Socials>
+      <br></br>
       <Link href ="/">
       <h3>
         Created by Arif Aulakh
-      </h3></Link>
-
+      </h3>
+      </Link>
     </div>
   </footer>
   )
   return (
-    <html>
+    <html className="bg-gray-100">
       <head />
       <body>
         <div className="mx-auto max-w-2xl px-6">

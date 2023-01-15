@@ -29,7 +29,7 @@ const PostPage = (props: any) => {
             </article>
             <br></br>
             <Link href ="../posts">
-                <h1 className="font-bold text-violet-600 hover:underline"> Back to all posts </h1>
+                <h1 className="font-bold text-blue-600 hover:underline"> Back to all posts </h1>
             </Link>
         </div>
     )
