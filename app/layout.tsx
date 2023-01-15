@@ -34,9 +34,9 @@ export default function RootLayout({
   </footer>
   )
   return (
-    <html className="bg-gray-100">
+      <html>
       <head />
-      <body>
+      <body className="dark: bg-gray-100">
         <div className="mx-auto max-w-2xl px-6">
           {header}
           {children}
@@ -44,5 +44,6 @@ export default function RootLayout({
         </div>
       </body>
     </html>
+    
   )
 }

@@ -1,12 +1,11 @@
-import Link from "next/link";
 import getPostMetadata from "../components/getPostMetadata";
 import PostPreview from "../components/PostPreview";
 import About from "../components/About";
-import Socials from "../components/Socials";
 import Image from "next/image";
-import profilePicture from "../public/profile.png"
+import profilePicture from "../public/profile.png";
 
 const HomePage = () => {
+
     const postMetadata = getPostMetadata();
     
     const postPreviews = postMetadata.map((post)=> (
@@ -14,7 +13,6 @@ const HomePage = () => {
     ));
     
     const aboutDetails = <About></About>;
-    const socials = <Socials></Socials>;
     return (
         <div> 
             <div className="flex flex-wrap justify-center">
@@ -22,8 +20,6 @@ const HomePage = () => {
             </div>
             {aboutDetails}
             <br></br>
-            {/* {socials}
-            <br></br> */}
             <h1 className="text-2xl font-bold text-black">Posts</h1>
             <br></br>
             {postPreviews} 
