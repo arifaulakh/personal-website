@@ -18,11 +18,12 @@ const HomePage = () => {
             <div className="flex flex-wrap justify-center">
                 <Image src ={profilePicture} alt="profile" height={150} width={150}></Image>
             </div>
-            {aboutDetails}
             <br></br>
+            {aboutDetails}
+            {/* <br></br>
             <h1 className="text-2xl font-bold text-black">Posts</h1>
             <br></br>
-            {postPreviews} 
+            {postPreviews}  */}
         </div>
     );
     
