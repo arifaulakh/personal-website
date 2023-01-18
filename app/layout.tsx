@@ -22,11 +22,11 @@ export default function RootLayout({
 
   const footer = (
     <footer>
-    <div className="mt-6 py-6 text-center text-slate-400 hover:underline">
+    <div className="mt-6 py-6 text-center text-slate-400">
       <Socials></Socials>
       <br></br>
       <Link href ="/">
-      <h3>
+      <h3 className="hover:underline">
         Created by Arif Aulakh
       </h3>
       </Link>
