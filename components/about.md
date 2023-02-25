@@ -14,4 +14,3 @@ I hope to start publishing some blog posts in the near future.
 
   * Run a half-marathon
   * Read 20 books
-  * Publish my writings regularly
