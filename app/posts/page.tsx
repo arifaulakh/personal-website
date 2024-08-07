@@ -9,7 +9,7 @@ const HomePage = () => {
     ));
 
     return <div> 
-        <h1 className="text-2xl font-bold text-black">Posts</h1>
+        <h1 className="text-2xl font-bold text-black">Writings</h1>
         <br></br>
         {postPreviews} 
     </div>;
