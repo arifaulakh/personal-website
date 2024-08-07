@@ -3,6 +3,7 @@ import PostPreview from "../components/PostPreview";
 import About from "../components/About";
 import Image from "next/image";
 import profilePicture from "../public/profile.png";
+import Link from "next/link";
 
 const HomePage = () => {
 
@@ -20,10 +21,14 @@ const HomePage = () => {
             </div>
             <br></br>
             {aboutDetails}
-            {/* <br></br>
-            <h1 className="text-2xl font-bold text-black">Posts</h1>
             <br></br>
-            {postPreviews}  */}
+            <Link href="/posts">
+                <h1 className="text-2xl font-bold text-black">Writings</h1>
+            </Link>
+            <br></br>
+            {postPreviews} 
+            {/* <br></br>
+            <p className=" text-gray-500">(Updated August 7th, 2024)</p> */}
         </div>
     );
     

@@ -16,5 +16,3 @@ In my free time, I enjoy travelling, listening to podcasts (my favorites are [<i
   * Running a half marathon
   * Reading more fiction
   * Writing on a regular cadence
-
-(Updated February 4, 2024)
