@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "../styles/globals.css";
 import Socials from "../components/Socials";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
@@ -42,6 +43,7 @@ export default function RootLayout({
           {children}
           {footer}
         </div>
+        <Analytics />
       </body>
     </html>
     
