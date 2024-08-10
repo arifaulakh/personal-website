@@ -3,10 +3,28 @@ import "../styles/globals.css";
 import Socials from "../components/Socials";
 import { Analytics } from "@vercel/analytics/react";
 
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: "Arif Aulakh",
+  description: "Arif Aulakh is a software engineer in NYC working at Check",
+  keywords: ["Arif Aulakh", "Check", "Check Technologies", "Software Engineer", "NYC", "UofT"],
+  openGraph: {
+    title: "Arif Aulakh",
+    description: "Arif Aulakh is a software engineer in NYC working at Check.",
+    url: "https://aaulakh.com",
+    type: "website",
+  },
+  viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
 }) {
 
   const header = (
@@ -37,7 +55,6 @@ export default function RootLayout({
 
   return (
     <html>
-      <head />
       <body className="dark:bg-gray-100">
         <div className="mx-auto max-w-2xl px-6">
           {header}

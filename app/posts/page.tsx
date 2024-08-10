@@ -1,7 +1,15 @@
+import { Metadata } from "next";
 import getPostMetadata from "../../components/getPostMetadata";
 import PostPreview from "../../components/PostPreview";
 
-const HomePage = () => {
+export const generateMetadata = (): Metadata => {
+    return {
+      title: "Writings",
+      description: "Blog posts written by Arif Aulakh"
+    };
+  };
+
+const WritingsPage = () => {
     const postMetadata = getPostMetadata();
     const postPreviews = postMetadata.map((post)=> (
         <PostPreview key={post.slug} {...post}/>
@@ -14,4 +22,4 @@ const HomePage = () => {
     </div>;
 };
 
-export default HomePage;
+export default WritingsPage;

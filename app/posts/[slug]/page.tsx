@@ -3,6 +3,7 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/getPostMetadata";
 import Link from "next/link";
+import { Metadata } from "next";
 
 const getPostContent = (slug: string) => {
     const folder = "posts/";
@@ -12,6 +13,16 @@ const getPostContent = (slug: string) => {
     return matterResult;
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const { slug } = params;
+    const post = getPostContent(slug);
+  
+    return {
+      title: `${post.data.title} | Arif Aulakh`, // Use the title from the markdown file
+      description: post.data.excerpt || "Post by Arif Aulakh",
+    };
+  }
+  
 export const generateStaticParams = async () => {
     const posts = getPostMetadata();
     return posts.map((post) => ({
