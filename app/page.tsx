@@ -28,7 +28,7 @@ const HomePage = () => {
             <br></br>
             {postPreviews} 
             <br></br>
-            <p className=" text-gray-500">(Updated August 7th, 2024)</p>
+            <p className=" text-gray-500">(Updated November 27th, 2024)</p>
         </div>
     );
     

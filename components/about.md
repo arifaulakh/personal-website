@@ -13,6 +13,6 @@ In my free time, I enjoy travelling, listening to podcasts (my favorites are [<i
 
 
 ### My goals for 2024:
-  * Running a half marathon
+  * Running a half marathon (ran the [<ins>**Toronto Waterfront Half Marathon**</ins>](https://sportstats.one/results/142386?focus=11952&type=pid) in October)
   * Reading more fiction
   * Writing on a regular cadence
