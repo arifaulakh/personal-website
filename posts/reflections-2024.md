@@ -1,7 +1,9 @@
 ---
 title: "Reflecting on 2024 & Looking Ahead to 2025"
 date: "February 3, 2025"
-image: "/nyc.png"
+image: "/nyc-smaller.png"
+description: "A reflection on moving to NYC, starting at Check, traveling the world, and growing personally and professionally in 2024."
+ogImage: "https://aaulakh.com/nyc-smaller.png"
 ---
 
 2024 was one of the most eventful years of my life. I started my first full-time job out of college, moved to a new city, traveled to multiple countries, and reconnected with old friends while making new ones. The year brought some of my highest highs and lowest lows, but it's one I'll remember for a long time.  

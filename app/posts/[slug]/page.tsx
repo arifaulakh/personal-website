@@ -20,19 +20,25 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   
     return {
       title: `${post.data.title} | Arif Aulakh`,
-      description: post.data.excerpt || "Post by Arif Aulakh",
+      description: post.data.description || "Post by Arif Aulakh",
       openGraph: {
         title: post.data.title,
-        description: post.data.excerpt || "Post by Arif Aulakh",
+        description: post.data.description || "Post by Arif Aulakh",
         images: [
           {
-            url: post.data.image || '/profile.png', // fallback to your profile picture
+            url: post.data.ogImage || post.data.image,
             width: 1200,
             height: 630,
             alt: post.data.title,
           },
         ],
       },
+      twitter: {
+        card: 'summary_large_image',
+        title: post.data.title,
+        description: post.data.description,
+        images: [post.data.ogImage || post.data.image],
+      }
     };
 }
   

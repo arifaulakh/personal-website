@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@arifaulakh', // your Twitter handle
+  },
 };
 
 export default function RootLayout({
