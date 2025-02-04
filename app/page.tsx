@@ -17,7 +17,14 @@ const HomePage = () => {
     return (
         <div> 
             <div className="flex flex-wrap justify-center">
-                <Image src ={profilePicture} alt="profile" height={150} width={150}></Image>
+                <Image 
+                    src={profilePicture} 
+                    alt="profile" 
+                    width={150} 
+                    height={0}
+                    priority
+                    style={{ width: '150px', height: 'auto' }}
+                ></Image>
             </div>
             <br></br>
             {aboutDetails}
@@ -28,7 +35,7 @@ const HomePage = () => {
             <br></br>
             {postPreviews} 
             <br></br>
-            <p className=" text-gray-500">(Updated November 27th, 2024)</p>
+            <p className=" text-gray-500">(Updated February 3, 2025)</p>
         </div>
     );
     
