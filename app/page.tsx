@@ -23,7 +23,7 @@ const HomePage = () => {
                     width={150}
                     height={0}
                     priority
-                    style={{ width: '150px', height: 'auto' }}
+                    style={{ width: '150px', height: 'auto', borderRadius: '0.5rem' }}
                 ></Image>
             </div>
             <br></br>
