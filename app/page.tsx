@@ -8,19 +8,19 @@ import Link from "next/link";
 const HomePage = () => {
 
     const postMetadata = getPostMetadata();
-    
-    const postPreviews = postMetadata.map((post)=> (
-        <PostPreview key={post.slug} {...post}/>
+
+    const postPreviews = postMetadata.map((post) => (
+        <PostPreview key={post.slug} {...post} />
     ));
-    
+
     const aboutDetails = <About></About>;
     return (
-        <div> 
+        <div>
             <div className="flex flex-wrap justify-center">
-                <Image 
-                    src={profilePicture} 
-                    alt="profile" 
-                    width={150} 
+                <Image
+                    src={profilePicture}
+                    alt="profile"
+                    width={150}
                     height={0}
                     priority
                     style={{ width: '150px', height: 'auto' }}
@@ -33,12 +33,12 @@ const HomePage = () => {
                 <h1 className="text-2xl font-bold text-black">Writings</h1>
             </Link>
             <br></br>
-            {postPreviews} 
+            {postPreviews}
             <br></br>
-            <p className=" text-gray-500">(Updated February 3, 2025)</p>
+            <p className=" text-gray-500">(Updated December 26, 2025)</p>
         </div>
     );
-    
+
 };
 
 export default HomePage;
