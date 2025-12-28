@@ -3,13 +3,14 @@ import { PostMetadata } from "./PostMetadata";
 
 const PostPreview = (props: PostMetadata) => {
     return (
-        <div className="mb-4">
-            <Link href = {`/posts/${props.slug}`}>
-                <h1 className="font-bold text-blue-600 underline">{props.title}</h1>
-            </Link>
-            {/* <p className="text-sm text-slate-400">{props.subtitle}</p> */}
-            <p className="text-sm text-slate-400">{props.date}</p>
-        </div>
+        <Link href={`/posts/${props.slug}`}>
+            <div className="group py-3 border-b border-gray-100 hover:border-gray-300 transition-colors duration-200">
+                <h2 className="font-medium text-gray-900 group-hover:text-gray-600 transition-colors duration-200 mb-1">
+                    {props.title}
+                </h2>
+                <p className="text-sm text-gray-400">{props.date}</p>
+            </div>
+        </Link>
     );
 };
 export default PostPreview;

@@ -3,25 +3,33 @@ import Link from "next/link";
 
 const Socials = () => {
     return (
-
-        <div className="flex justify-center space-x-2">
-                <Link href = "https://www.linkedin.com/in/arifaulakh">
-                    <Linkedin className = "text-3xl"  />
-                </Link>
-                <Link href = "https://www.github.com/arifaulakh">
-                    <Github className = "text-3xl"/>
-                </Link>
-                <Link href = "https://twitter.com/arifaulakh">
-                    <Twitter className = "text-3xl"/>
-                </Link>
-                <Link href = "mailto:arifaulakh@gmail.com">
-                    <Email className = "text-3xl"/>
-                </Link>
-
+        <div className="flex justify-center space-x-5">
+            <Link
+                href="https://www.linkedin.com/in/arifaulakh"
+                className="text-gray-400 hover:text-gray-900 transition-colors duration-200"
+            >
+                <Linkedin className="w-5 h-5" />
+            </Link>
+            <Link
+                href="https://www.github.com/arifaulakh"
+                className="text-gray-400 hover:text-gray-900 transition-colors duration-200"
+            >
+                <Github className="w-5 h-5" />
+            </Link>
+            <Link
+                href="https://twitter.com/arifaulakh"
+                className="text-gray-400 hover:text-gray-900 transition-colors duration-200"
+            >
+                <Twitter className="w-5 h-5" />
+            </Link>
+            <Link
+                href="mailto:arifaulakh@gmail.com"
+                className="text-gray-400 hover:text-gray-900 transition-colors duration-200"
+            >
+                <Email className="w-5 h-5" />
+            </Link>
         </div>
-
     );
-
 }
 
 export default Socials;

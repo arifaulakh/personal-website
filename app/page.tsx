@@ -16,26 +16,33 @@ const HomePage = () => {
     const aboutDetails = <About></About>;
     return (
         <div>
-            <div className="flex flex-wrap justify-center">
+            <div className="flex justify-center mb-8">
                 <Image
                     src={profilePicture}
                     alt="profile"
-                    width={150}
-                    height={0}
+                    width={140}
+                    height={140}
                     priority
-                    style={{ width: '150px', height: 'auto', borderRadius: '0.5rem' }}
-                ></Image>
+                    className="rounded-full"
+                    style={{ width: '140px', height: 'auto' }}
+                />
             </div>
-            <br></br>
-            {aboutDetails}
-            <br></br>
-            <Link href="/posts">
-                <h1 className="text-2xl font-bold text-black">Writings</h1>
-            </Link>
-            <br></br>
-            {postPreviews}
-            <br></br>
-            <p className=" text-gray-500">(Updated December 26, 2025)</p>
+
+            <div className="mb-12">
+                {aboutDetails}
+            </div>
+
+            <div className="mb-6">
+                <Link href="/posts">
+                    <h2 className="text-xl font-medium text-gray-900 hover:text-gray-600 transition-colors duration-200">
+                        Writings
+                    </h2>
+                </Link>
+            </div>
+
+            <div className="space-y-6">
+                {postPreviews}
+            </div>
         </div>
     );
 

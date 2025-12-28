@@ -15,10 +15,13 @@ const WritingsPage = () => {
         <PostPreview key={post.slug} {...post}/>
     ));
 
-    return <div> 
-        <h1 className="text-2xl font-bold text-black">Writings</h1>
-        <br></br>
-        {postPreviews} 
+    return <div>
+        <h1 className="text-2xl font-medium text-gray-900 mb-8">
+            Writings
+        </h1>
+        <div className="space-y-6">
+            {postPreviews}
+        </div>
     </div>;
 };
 

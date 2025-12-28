@@ -33,9 +33,9 @@ export default function RootLayout({
 
   const header = (
     <header>
-      <div className="text-center my-6">
+      <div className="text-center mb-12 mt-8">
         <Link href="/">
-          <h1 className="text-3xl text-black font-bold">
+          <h1 className="text-3xl font-medium text-gray-900 hover:text-gray-600 transition-colors duration-200">
             Arif Aulakh
           </h1>
         </Link>
@@ -45,24 +45,21 @@ export default function RootLayout({
 
   const footer = (
     <footer>
-      <div className="mt-6 py-6 text-center text-slate-400">
+      <div className="mt-12 pt-6 pb-8 text-center">
         <Socials />
-        <br />
-        <Link href="/">
-          <h3 className="hover:underline">
-            Created by Arif Aulakh
-          </h3>
-        </Link>
+        <p className="text-xs text-gray-300 mt-6">(Updated December 26, 2025)</p>
       </div>
     </footer>
   );
 
   return (
     <html>
-      <body className="dark:bg-gray-100">
+      <body className="bg-white">
         <div className="mx-auto max-w-2xl px-6">
           {header}
-          {children}
+          <main>
+            {children}
+          </main>
           {footer}
         </div>
         <Analytics />

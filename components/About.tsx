@@ -13,7 +13,7 @@ const About = () => {
     const about = getAboutContent();
     return (
         <div>
-            <article className="prose lg:prose-base">
+            <article className="prose prose-gray max-w-none">
                 <Markdown>{about.content}</Markdown>
             </article>
         </div>
