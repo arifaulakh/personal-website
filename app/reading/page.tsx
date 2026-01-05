@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import booksData from "../../data/books.json";
+import { books, Book } from "../../data/books";
 
 export const generateMetadata = (): Metadata => {
     return {
@@ -7,15 +7,6 @@ export const generateMetadata = (): Metadata => {
         description: "Books I'm reading"
     };
 };
-
-interface Book {
-    title: string;
-    author: string;
-    status: "reading" | "completed" | "planned";
-    year: number;
-}
-
-const books: Book[] = booksData;
 
 const ReadingPage = () => {
     // Group books by year
