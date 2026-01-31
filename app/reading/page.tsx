@@ -25,13 +25,13 @@ const ReadingPage = () => {
 
     return (
         <div>
-            <h1 className="text-2xl font-medium text-gray-900 mb-8">
+            <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-8">
                 Reading
             </h1>
 
             {sortedYears.map((year) => (
                 <div key={year} className="mb-10 last:mb-0">
-                    <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-4">
+                    <h2 className="text-sm font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4">
                         {year}
                     </h2>
                     <div className="space-y-4">
@@ -40,10 +40,10 @@ const ReadingPage = () => {
                                 key={index}
                                 className="group"
                             >
-                                <h3 className="text-lg font-medium text-gray-900 mb-1">
+                                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
                                     {book.title}
                                 </h3>
-                                <div className="flex items-center gap-2 text-sm text-gray-500">
+                                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                                     <span>{book.author}</span>
                                     <span>·</span>
                                     <span className="text-xs">

@@ -63,15 +63,15 @@ const PostPage = (props: any) => {
     return (
         <div>
             <div className="mb-8">
-                <h1 className="text-2xl font-medium text-gray-900 mb-2">{post.data.title}</h1>
-                <p className="text-sm text-gray-400">{post.data.date}</p>
+                <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">{post.data.title}</h1>
+                <p className="text-sm text-gray-400 dark:text-gray-500">{post.data.date}</p>
             </div>
             <article className="prose prose-gray max-w-none mx-auto" style={{ maxWidth: '65ch' }}>
                 <Markdown options={options}>{post.content}</Markdown>
             </article>
-            <div className="mt-12 pt-6 border-t border-gray-100">
+            <div className="mt-12 pt-6 border-t border-gray-100 dark:border-gray-800">
                 <Link href="../posts">
-                    <span className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200">← Back to all posts</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">← Back to all posts</span>
                 </Link>
             </div>
         </div>

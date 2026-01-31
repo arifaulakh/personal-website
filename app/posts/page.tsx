@@ -16,7 +16,7 @@ const WritingsPage = () => {
     ));
 
     return <div>
-        <h1 className="text-2xl font-medium text-gray-900 mb-8">
+        <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-8">
             Writings
         </h1>
         <div className="space-y-6">

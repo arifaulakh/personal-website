@@ -2,9 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  color-scheme: light dark;
+  background-color: #fff;
+  min-height: 100%;
+}
+
+html.dark {
+  color-scheme: dark;
+  background-color: #171717;
+}
+
+html.light {
+  color-scheme: light;
+  background-color: #fff;
+}
+
 @layer base {
   body {
-    @apply antialiased text-gray-900;
+    @apply antialiased text-gray-900 dark:text-gray-100 bg-white dark:bg-neutral-900;
     font-feature-settings: 'kern' 1;
     letter-spacing: -0.011em;
   }
@@ -15,17 +31,17 @@
 
   /* Prose customization for minimalist aesthetic */
   .prose {
-    @apply text-gray-700;
+    @apply text-gray-700 dark:text-gray-300;
     line-height: 1.75;
   }
 
   .prose p {
-    @apply text-gray-700;
+    @apply text-gray-700 dark:text-gray-300;
     margin-bottom: 1.25em;
   }
 
   .prose h1, .prose h2, .prose h3, .prose h4 {
-    @apply text-gray-900 font-medium;
+    @apply text-gray-900 dark:text-gray-100 font-medium;
     margin-top: 2em;
     margin-bottom: 0.75em;
   }
@@ -43,25 +59,25 @@
   }
 
   .prose a {
-    @apply text-gray-900 underline decoration-gray-300;
+    @apply text-gray-900 dark:text-gray-100 underline decoration-gray-300 dark:decoration-gray-600;
     transition: all 0.2s ease;
   }
 
   .prose a:hover {
-    @apply decoration-gray-600;
+    @apply decoration-gray-600 dark:decoration-gray-400;
   }
 
   .prose strong {
-    @apply text-gray-900 font-medium;
+    @apply text-gray-900 dark:text-gray-100 font-medium;
   }
 
   .prose code {
-    @apply text-gray-800 bg-gray-50 px-1.5 py-0.5 rounded text-sm;
+    @apply text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm;
     font-weight: 400;
   }
 
   .prose pre {
-    @apply bg-gray-50 border border-gray-200 rounded-lg;
+    @apply bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg;
   }
 
   .prose pre code {
@@ -69,10 +85,10 @@
   }
 
   .prose ul, .prose ol {
-    @apply text-gray-700;
+    @apply text-gray-700 dark:text-gray-300;
   }
 
   .prose blockquote {
-    @apply border-l-gray-300 text-gray-600 italic;
+    @apply border-l-gray-300 dark:border-l-gray-600 text-gray-600 dark:text-gray-400 italic;
   }
 }

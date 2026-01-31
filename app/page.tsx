@@ -34,7 +34,7 @@ const HomePage = () => {
 
             <div className="mb-6">
                 <Link href="/posts">
-                    <h2 className="text-xl font-medium text-gray-900 hover:text-gray-600 transition-colors duration-200">
+                    <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
                         Writings
                     </h2>
                 </Link>
