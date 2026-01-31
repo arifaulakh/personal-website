@@ -1,4 +1,4 @@
-I'm a software engineer at [<ins>**Comulate**</ins>](https://comulate.com/about) building at the intersection of insurance and AI. I live in San Francisco, and am originally from Toronto.
+I'm a software engineer at [<ins>**Comulate**</ins>](https://about.comulate.com/) building at the intersection of insurance and AI. I live in San Francisco, and am originally from Toronto.
 
 Previously, I worked on payroll infrastructure software at [<ins>**Check**</ins>](https://checkhq.com) in NYC, built LLM applications for e-commerce at **OpenStore**, and dabbled in infrastructure and front-end projects at **Microsoft**. I studied math, computer science, and history at the **University of Toronto**.
 
