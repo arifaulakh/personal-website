@@ -64,7 +64,7 @@ const PostPage = (props: any) => {
         <div>
             <div className="mb-8">
                 <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">{post.data.title}</h1>
-                <p className="text-sm text-gray-400 dark:text-gray-500">{post.data.date}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{post.data.date}</p>
             </div>
             <article className="prose prose-gray max-w-none mx-auto" style={{ maxWidth: '65ch' }}>
                 <Markdown options={options}>{post.content}</Markdown>

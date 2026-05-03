@@ -31,7 +31,7 @@ const ReadingPage = () => {
 
             {sortedYears.map((year) => (
                 <div key={year} className="mb-10 last:mb-0">
-                    <h2 className="text-sm font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4">
+                    <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
                         {year}
                     </h2>
                     <div className="space-y-4">

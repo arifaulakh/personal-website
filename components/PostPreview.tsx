@@ -8,7 +8,7 @@ const PostPreview = (props: PostMetadata) => {
                 <h2 className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-200 mb-1">
                     {props.title}
                 </h2>
-                <p className="text-sm text-gray-400 dark:text-gray-500">{props.date}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{props.date}</p>
             </div>
         </Link>
     );

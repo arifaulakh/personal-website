@@ -53,7 +53,6 @@ export default function RootLayout({
     <footer>
       <div className="mt-12 pt-6 pb-8 text-center">
         <Socials />
-        <p className="text-xs text-gray-300 dark:text-gray-600 mt-6">(Updated December 26, 2025)</p>
       </div>
     </footer>
   );
