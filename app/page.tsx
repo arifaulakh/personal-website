@@ -49,17 +49,24 @@ const HomePage = () => {
 
             {currentlyReading.length > 0 && (
                 <>
-                    <div className="mt-12 mb-6">
-                        <Link href="/reading">
-                            <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
-                                Currently Reading
-                            </h2>
+                    <div className="mt-12 mb-6 flex items-baseline justify-between gap-4">
+                        <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100">
+                            Reading
+                        </h2>
+                        <Link
+                            href="/reading"
+                            className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
+                        >
+                            View all
                         </Link>
                     </div>
 
                     <div className="space-y-3">
                         {currentlyReading.map((book) => (
                             <div key={`${book.title}-${book.author}`}>
+                                <p className="mb-1 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                    Currently reading
+                                </p>
                                 <p className="text-gray-900 dark:text-gray-100">
                                     {book.title}
                                 </p>
