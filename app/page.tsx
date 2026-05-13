@@ -60,7 +60,7 @@ const HomePage = () => {
                     <div className="space-y-3">
                         {currentlyReading.map((book) => (
                             <div key={`${book.title}-${book.author}`}>
-                                <p className="mb-1 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
                                     Currently reading
                                 </p>
                                 <p className="text-gray-900 dark:text-gray-100">
