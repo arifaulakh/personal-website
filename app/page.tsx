@@ -52,7 +52,7 @@ const HomePage = () => {
                     <div className="mt-12 mb-6">
                         <Link href="/reading">
                             <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
-                                Reading
+                                Currently Reading
                             </h2>
                         </Link>
                     </div>

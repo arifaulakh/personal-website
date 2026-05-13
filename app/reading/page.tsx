@@ -9,8 +9,11 @@ export const generateMetadata = (): Metadata => {
 };
 
 const ReadingPage = () => {
-    // Group books by year
-    const booksByYear = books.reduce((acc, book) => {
+    const currentlyReading = books.filter((book) => book.status === "reading");
+    const archivedBooks = books.filter((book) => book.status !== "reading");
+
+    // Group archived books by year
+    const booksByYear = archivedBooks.reduce((acc, book) => {
         if (!acc[book.year]) {
             acc[book.year] = [];
         }
@@ -28,6 +31,29 @@ const ReadingPage = () => {
             <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-8">
                 Reading
             </h1>
+
+            {currentlyReading.length > 0 && (
+                <div className="mb-10">
+                    <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+                        Currently Reading
+                    </h2>
+                    <div className="space-y-4">
+                        {currentlyReading.map((book, index) => (
+                            <div
+                                key={index}
+                                className="group"
+                            >
+                                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-1">
+                                    {book.title}
+                                </h3>
+                                <div className="text-sm text-gray-500 dark:text-gray-400">
+                                    {book.author}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {sortedYears.map((year) => (
                 <div key={year} className="mb-10 last:mb-0">
