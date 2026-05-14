@@ -17,27 +17,29 @@ const getPostContent = (slug: string) => {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const { slug } = params;
     const post = getPostContent(slug);
+    const description = post.data.description || "Post by Arif Aulakh";
+    const image = post.data.ogImage || post.data.image;
   
     return {
-      title: `${post.data.title} | Arif Aulakh`,
-      description: post.data.description || "Post by Arif Aulakh",
+      title: post.data.title,
+      description,
       openGraph: {
         title: post.data.title,
-        description: post.data.description || "Post by Arif Aulakh",
-        images: [
+        description,
+        ...(image ? { images: [
           {
-            url: post.data.ogImage || post.data.image,
+            url: image,
             width: 1200,
             height: 630,
             alt: post.data.title,
           },
-        ],
+        ] } : {}),
       },
       twitter: {
-        card: 'summary_large_image',
+        card: image ? "summary_large_image" : "summary",
         title: post.data.title,
-        description: post.data.description,
-        images: [post.data.ogImage || post.data.image],
+        description,
+        ...(image ? { images: [image] } : {}),
       }
     };
 }

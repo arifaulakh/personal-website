@@ -4,7 +4,7 @@ import { books, Book } from "../../data/books";
 export const generateMetadata = (): Metadata => {
     return {
         title: "Reading",
-        description: "Books I'm reading"
+        description: "Books Arif Aulakh is reading and has finished"
     };
 };
 

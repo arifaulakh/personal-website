@@ -5,7 +5,7 @@ import PostPreview from "../../components/PostPreview";
 export const generateMetadata = (): Metadata => {
     return {
       title: "Writings",
-      description: "Blog posts written by Arif Aulakh"
+      description: "Essays and notes by Arif Aulakh"
     };
   };
 

@@ -5,15 +5,19 @@ import ThemeToggle from "../components/ThemeToggle";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Arif Aulakh",
-  description: "Arif Aulakh is a software engineer in NYC working at Check",
-  keywords: ["Arif Aulakh", "Check", "Check Technologies", "Software Engineer", "NYC", "UofT"],
+  metadataBase: new URL("https://aaulakh.com"),
+  title: {
+    default: "Arif Aulakh",
+    template: "%s | Arif Aulakh",
+  },
+  description: "Arif Aulakh is a software engineer in San Francisco working at Comulate.",
+  keywords: ["Arif Aulakh", "Comulate", "Software Engineer", "San Francisco", "AI", "UofT"],
   openGraph: {
     title: "Arif Aulakh",
-    description: "Arif Aulakh is a software engineer in NYC working at Check.",
+    description: "Arif Aulakh is a software engineer in San Francisco working at Comulate.",
     url: "https://aaulakh.com",
     type: "website",
   },
@@ -22,8 +26,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@arifaulakh', // your Twitter handle
+    card: "summary_large_image",
+    site: "@arifaulakh",
+    creator: "@arifaulakh",
   },
 };
 
