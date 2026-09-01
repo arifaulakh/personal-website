@@ -24,7 +24,7 @@ export default function HomePage() {
           <p>
             Outside of work, I enjoy running, travelling, reading about history,
             trying new restaurants, playing basketball, watching the NFL, and
-            spending time with friends. I listen to{" "}
+            spending time with friends. I enjoy listening to{" "}
             <a href="https://podcasts.apple.com/ca/podcast/invest-like-the-best-with-patrick-oshaughnessy/id1154105909">
               Invest Like the Best
             </a>{" "}

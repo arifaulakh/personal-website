@@ -17,11 +17,5 @@ export const books: Book[] = [
         author: "David McCullough",
         status: "completed",
         year: 2026
-    },
-    {
-        title: "Technological Revolutions and Financial Capital: The Dynamics of Bubbles and Golden Ages",
-        author: "Carlota Perez",
-        status: "reading",
-        year: 2026
     }
 ];
