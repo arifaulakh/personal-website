@@ -1,6 +1,7 @@
 ---
 title: "Combining Interests"
 date: "August 7, 2024"
+dateISO: "2024-08-07"
 ---
 
 I spend a significant amount of my free time thinking about how to effectively combine and pursue my different interests. Up until this point in my life, I've never felt an extreme passion for one subject or topic; instead, I'm typically drawn to and excited about multiple subjects and the intersections between them.
@@ -40,4 +41,3 @@ Overall, while I believe it can be incredibly valuable to choose a specialized c
 Finally, something that I've found really effective in trying to think about how to combine and pursue a variety of interests is trying to build and maintain a diverse network. Often, the most valuable and thought-provoking insights on how to approach my career and life come from my friends, family, and mentors who are in entirely different professions and share almost no overlapping passions or hobbies. 
 
 I want to conclude by saying that I am nowhere near figuring out the right balance or approach for combining interests. This post is simply a reflection of my experience so far.
-

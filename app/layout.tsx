@@ -1,11 +1,17 @@
-import Link from "next/link";
-import "../styles/globals.css";
-import Socials from "../components/Socials";
-import ThemeToggle from "../components/ThemeToggle";
-import { ThemeProvider } from "../components/ThemeProvider";
-import { Analytics } from "@vercel/analytics/react";
-
 import type { Metadata } from "next";
+import { IBM_Plex_Sans } from "next/font/google";
+import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "../components/ThemeProvider";
+import ThemeToggle from "../components/ThemeToggle";
+import "../styles/globals.css";
+
+const plex = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-plex",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aaulakh.com"),
@@ -13,18 +19,23 @@ export const metadata: Metadata = {
     default: "Arif Aulakh",
     template: "%s | Arif Aulakh",
   },
-  description: "Arif Aulakh is a software engineer in San Francisco working at Comulate.",
-  keywords: ["Arif Aulakh", "Comulate", "Software Engineer", "San Francisco", "AI", "UofT"],
+  description:
+    "Arif Aulakh is a software engineer in San Francisco working at the intersection of insurance and AI.",
+  keywords: [
+    "Arif Aulakh",
+    "Comulate",
+    "Software Engineer",
+    "San Francisco",
+    "University of Toronto",
+  ],
   openGraph: {
     title: "Arif Aulakh",
-    description: "Arif Aulakh is a software engineer in San Francisco working at Comulate.",
+    description:
+      "Software engineer in San Francisco working at the intersection of insurance and AI.",
     url: "https://aaulakh.com",
     type: "website",
   },
-  viewport: "width=device-width, initial-scale=1",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: "/favicon.ico" },
   twitter: {
     card: "summary_large_image",
     site: "@arifaulakh",
@@ -32,46 +43,30 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode,
-}) {
-
-  const header = (
-    <header>
-      <div className="flex justify-between items-center mb-12 mt-8">
-        <div className="flex-1" />
-        <Link href="/">
-          <h1 className="text-3xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
-            Arif Aulakh
-          </h1>
-        </Link>
-        <div className="flex-1 flex justify-end">
-          <ThemeToggle />
-        </div>
-      </div>
-    </header>
-  );
-
-  const footer = (
-    <footer>
-      <div className="mt-12 pt-6 pb-8 text-center">
-        <Socials />
-      </div>
-    </footer>
-  );
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning>
-      <body className="bg-white dark:bg-neutral-900">
+    <html lang="en" className={plex.variable} suppressHydrationWarning>
+      <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="mx-auto max-w-2xl px-6">
-            {header}
-            <main>
-              {children}
-            </main>
-            {footer}
+          <div className="site-shell">
+            <header className="site-header">
+              <nav aria-label="Primary navigation">
+                <Link className="site-name" href="/">
+                  Arif Aulakh
+                </Link>
+                <Link href="/posts">Posts</Link>
+                <Link href="/reading">Reading</Link>
+                <ThemeToggle />
+              </nav>
+            </header>
+
+            <main>{children}</main>
+
+            <footer className="site-footer">
+              <a href="mailto:arifaulakh@gmail.com">Email</a>
+              <a href="https://github.com/arifaulakh">GitHub</a>
+              <a href="https://www.linkedin.com/in/arifaulakh">LinkedIn</a>
+            </footer>
           </div>
         </ThemeProvider>
         <Analytics />

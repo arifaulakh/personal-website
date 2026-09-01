@@ -1,6 +1,7 @@
 ---
 title: "Reflecting on 2024 & Looking Ahead to 2025"
 date: "February 3, 2025"
+dateISO: "2025-02-03"
 image: "/nyc-smaller.png"
 description: "A reflection on moving to NYC, starting at Check, traveling the world, and growing personally and professionally in 2024."
 ogImage: "https://aaulakh.com/nyc-smaller.png"
@@ -96,4 +97,3 @@ For the first time in a while, I feel like I'm enjoying the daily grind and work
 - **Playing basketball again.** I grew up playing competitively but stopped in high school. I recently started playing pickup again and want to keep it up 1–2 times a week.  
 - **Running.** Training for a half-marathon was one of my favorite experiences last year. I've signed up for another half in May and hope to run my first full marathon in the fall.  
 - **Learning from people I admire in technology.** Last year, I found myself hesitating to reach out to people I look up to—whether due to self-doubt or feeling like I needed to have everything figured out as a full-time engineer. This year, I want to push past that hesitation and have more conversations with those whose work and insights I respect.
-

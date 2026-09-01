@@ -1,82 +1,48 @@
-import getPostMetadata from "../components/getPostMetadata";
-import PostPreview from "../components/PostPreview";
-import About from "../components/About";
-import Image from "next/image";
-import profilePicture from "../public/profile.png";
 import Link from "next/link";
-import { books } from "../data/books";
 
-const HomePage = () => {
-
-    const postMetadata = getPostMetadata();
-
-    const postPreviews = postMetadata.map((post) => (
-        <PostPreview key={post.slug} {...post} />
-    ));
-
-    const currentlyReading = books.filter((book) => book.status === "reading");
-
-    const aboutDetails = <About></About>;
-    return (
-        <div>
-            <div className="flex justify-center mb-8">
-                <Image
-                    src={profilePicture}
-                    alt="profile"
-                    width={140}
-                    height={140}
-                    priority
-                    className="rounded-full"
-                    style={{ width: '140px', height: 'auto' }}
-                />
-            </div>
-
-            <div className="mb-12">
-                {aboutDetails}
-            </div>
-
-            <div className="mb-6">
-                <Link href="/posts">
-                    <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
-                        Writings
-                    </h2>
-                </Link>
-            </div>
-
-            <div className="space-y-6">
-                {postPreviews}
-            </div>
-
-            {currentlyReading.length > 0 && (
-                <>
-                    <div className="mt-12 mb-6">
-                        <Link href="/reading">
-                            <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-200">
-                                Reading
-                            </h2>
-                        </Link>
-                    </div>
-
-                    <div className="space-y-3">
-                        {currentlyReading.map((book) => (
-                            <div key={`${book.title}-${book.author}`}>
-                                <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                                    Currently reading
-                                </p>
-                                <p className="text-gray-900 dark:text-gray-100">
-                                    {book.title}
-                                </p>
-                                <p className="text-sm text-gray-500 dark:text-gray-400">
-                                    {book.author}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </>
-            )}
+export default function HomePage() {
+  return (
+    <>
+      <section className="intro" id="about">
+        <h1>Hi, I’m Arif.</h1>
+        <div className="intro-copy">
+          <p>
+            I’m a software engineer based in San Francisco, originally from
+            Toronto.
+          </p>
+          <p>
+            I’ve worked at <a href="https://eng.comulate.com/">Comulate</a>,{" "}
+            <a href="https://checkhq.com">Check</a>, OpenStore, and Microsoft,
+            across insurance and payroll infrastructure, LLM applications for
+            e-commerce, and front-end and infrastructure projects.
+          </p>
+          <p>
+            I studied math, computer science, and history at the University of
+            Toronto. These days, I’m interested in AI-enabled services, vertical
+            software, and technology-enabled rollups.
+          </p>
+          <p>
+            Outside of work, I enjoy running, travelling, reading about history,
+            trying new restaurants, playing basketball, watching the NFL, and
+            spending time with friends. I listen to{" "}
+            <a href="https://podcasts.apple.com/ca/podcast/invest-like-the-best-with-patrick-oshaughnessy/id1154105909">
+              Invest Like the Best
+            </a>{" "}
+            and <a href="https://www.acquired.fm/">Acquired</a>.
+          </p>
         </div>
-    );
+      </section>
 
-};
+      <section className="home-section" id="writing">
+        <h2>Posts</h2>
+        <div className="text-list">
+          <Link href="/posts/reflections-2024">
+            Reflecting on 2024 &amp; Looking Ahead to 2025
+          </Link>
+          <Link href="/posts/combining-interests">Combining Interests</Link>
+        </div>
+      </section>
 
-export default HomePage;
+    </>
+  );
+}

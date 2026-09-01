@@ -17,18 +17,17 @@ const getPostContent = (slug: string) => {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const { slug } = params;
     const post = getPostContent(slug);
-    const description = post.data.description || "Post by Arif Aulakh";
-    const image = post.data.ogImage || post.data.image;
-  
+    const socialImage = post.data.ogImage || post.data.image;
+
     return {
       title: post.data.title,
-      description,
+      description: post.data.description || "Post by Arif Aulakh",
       openGraph: {
         title: post.data.title,
-        description,
-        ...(image ? { images: [
+        description: post.data.description || "Post by Arif Aulakh",
+        ...(socialImage ? { images: [
           {
-            url: image,
+            url: socialImage,
             width: 1200,
             height: 630,
             alt: post.data.title,
@@ -36,10 +35,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         ] } : {}),
       },
       twitter: {
-        card: image ? "summary_large_image" : "summary",
+        card: 'summary_large_image',
         title: post.data.title,
-        description,
-        ...(image ? { images: [image] } : {}),
+        description: post.data.description || "Post by Arif Aulakh",
+        ...(socialImage ? { images: [socialImage] } : {}),
       }
     };
 }
@@ -50,8 +49,8 @@ export const generateStaticParams = async () => {
         slug: post.slug,
     }));
 };
-const PostPage = (props: any) => {
-    const slug = props.params.slug;
+const PostPage = ({ params }: { params: { slug: string } }) => {
+    const slug = params.slug;
     const post = getPostContent(slug);
     
     const options = {
@@ -63,19 +62,15 @@ const PostPage = (props: any) => {
     };
 
     return (
-        <div>
-            <div className="mb-8">
-                <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">{post.data.title}</h1>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{post.data.date}</p>
-            </div>
-            <article className="prose prose-gray max-w-none mx-auto" style={{ maxWidth: '65ch' }}>
+        <div className="post-page">
+            <header>
+                <h1>{post.data.title}</h1>
+                <time dateTime={post.data.dateISO}>{post.data.date}</time>
+            </header>
+            <article className="prose">
                 <Markdown options={options}>{post.content}</Markdown>
             </article>
-            <div className="mt-12 pt-6 border-t border-gray-100 dark:border-gray-800">
-                <Link href="../posts">
-                    <span className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">← Back to all posts</span>
-                </Link>
-            </div>
+            <Link className="back-link" href="/posts">← Back to all posts</Link>
         </div>
     )
 };

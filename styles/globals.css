@@ -2,93 +2,334 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  color-scheme: light dark;
-  background-color: #fff;
-  min-height: 100%;
-}
-
-html.dark {
-  color-scheme: dark;
-  background-color: #171717;
-}
-
-html.light {
+:root {
+  --paper: #ffffff;
+  --ink: #1d2329;
+  --slate: #47515b;
+  --mist: #75808a;
+  --hairline: #e7eaec;
   color-scheme: light;
-  background-color: #fff;
 }
 
-@layer base {
-  body {
-    @apply antialiased text-gray-900 dark:text-gray-100 bg-white dark:bg-neutral-900;
-    font-feature-settings: 'kern' 1;
-    letter-spacing: -0.011em;
+.dark {
+  --paper: #17191b;
+  --ink: #f1f3f4;
+  --slate: #c4c9cd;
+  --mist: #8f989f;
+  --hairline: #303438;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--paper);
+  color: var(--slate);
+  font-family: var(--font-plex), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--mist);
+  outline-offset: 4px;
+}
+
+.site-shell {
+  width: min(632px, calc(100% - 48px));
+  min-height: 100vh;
+  margin-left: max(48px, calc((100vw - 944px) / 2));
+  padding: 58px 0 96px;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--mist);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.site-header .site-name {
+  color: var(--ink);
+}
+
+.theme-toggle,
+.theme-toggle-placeholder {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--mist);
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--ink);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--mist);
+  outline-offset: 4px;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+main {
+  padding-top: 96px;
+}
+
+.intro h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+.intro-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 34px;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+.intro-copy a {
+  color: var(--ink);
+}
+
+.home-section {
+  padding-top: 48px;
+}
+
+.intro + .home-section {
+  padding-top: 62px;
+}
+
+.home-section h2 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer {
+  display: flex;
+  gap: 22px;
+  padding-top: 58px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.index-page > h1,
+.post-page h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.index-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 34px;
+}
+
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: fit-content;
+}
+
+.post-preview time,
+.post-page time,
+.book span {
+  color: var(--mist);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.reading-year {
+  padding-top: 42px;
+}
+
+.reading-year h2 {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.book h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.book p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.book span {
+  display: block;
+}
+
+.post-page header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 42px;
+}
+
+.prose {
+  color: var(--slate);
+}
+
+.prose > *:first-child {
+  margin-top: 0;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 22px;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin: 42px 0 14px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 22px;
+}
+
+.prose a {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.prose blockquote {
+  margin: 28px 0;
+  padding-left: 18px;
+  border-left: 1px solid var(--hairline);
+  color: var(--mist);
+}
+
+.prose img {
+  width: 100%;
+  height: auto;
+}
+
+.back-link {
+  display: block;
+  width: fit-content;
+  margin-top: 58px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 720px) {
+  .site-shell {
+    width: auto;
+    margin: 0;
+    padding: 32px 24px 64px;
   }
 
-  h1, h2, h3 {
-    letter-spacing: -0.025em;
+  .site-header nav {
+    gap: 18px;
   }
 
-  /* Prose customization for minimalist aesthetic */
-  .prose {
-    @apply text-gray-700 dark:text-gray-300;
-    line-height: 1.75;
+  main {
+    padding-top: 72px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header nav {
+    flex-wrap: wrap;
+    row-gap: 8px;
   }
 
-  .prose p {
-    @apply text-gray-700 dark:text-gray-300;
-    margin-bottom: 1.25em;
+  .site-header .site-name {
+    flex-basis: 100%;
   }
 
-  .prose h1, .prose h2, .prose h3, .prose h4 {
-    @apply text-gray-900 dark:text-gray-100 font-medium;
-    margin-top: 2em;
-    margin-bottom: 0.75em;
-  }
+}
 
-  .prose h1 {
-    font-size: 1.75em;
-  }
-
-  .prose h2 {
-    font-size: 1.5em;
-  }
-
-  .prose h3 {
-    font-size: 1.25em;
-  }
-
-  .prose a {
-    @apply text-gray-900 dark:text-gray-100 underline decoration-gray-300 dark:decoration-gray-600;
-    transition: all 0.2s ease;
-  }
-
-  .prose a:hover {
-    @apply decoration-gray-600 dark:decoration-gray-400;
-  }
-
-  .prose strong {
-    @apply text-gray-900 dark:text-gray-100 font-medium;
-  }
-
-  .prose code {
-    @apply text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm;
-    font-weight: 400;
-  }
-
-  .prose pre {
-    @apply bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg;
-  }
-
-  .prose pre code {
-    @apply bg-transparent p-0;
-  }
-
-  .prose ul, .prose ol {
-    @apply text-gray-700 dark:text-gray-300;
-  }
-
-  .prose blockquote {
-    @apply border-l-gray-300 dark:border-l-gray-600 text-gray-600 dark:text-gray-400 italic;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

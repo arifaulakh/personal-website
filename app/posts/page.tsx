@@ -4,8 +4,8 @@ import PostPreview from "../../components/PostPreview";
 
 export const generateMetadata = (): Metadata => {
     return {
-      title: "Writings",
-      description: "Essays and notes by Arif Aulakh"
+      title: "Posts",
+      description: "Blog posts written by Arif Aulakh"
     };
   };
 
@@ -15,11 +15,9 @@ const WritingsPage = () => {
         <PostPreview key={post.slug} {...post}/>
     ));
 
-    return <div>
-        <h1 className="text-2xl font-medium text-gray-900 dark:text-gray-100 mb-8">
-            Writings
-        </h1>
-        <div className="space-y-6">
+    return <div className="index-page">
+        <h1>Posts</h1>
+        <div className="index-list">
             {postPreviews}
         </div>
     </div>;

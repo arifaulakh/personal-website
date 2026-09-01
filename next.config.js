@@ -1,10 +1,5 @@
-const { handleWebpackExternalForEdgeRuntime } = require("next/dist/build/webpack/plugins/middleware-plugin")
-
 const nextConfig = {
   reactStrictMode: true,
-  experimental:{
-    appDir: true
-  },
   webpack(config) {
       config.module.rules.push({
         test: /\.svg$/,
