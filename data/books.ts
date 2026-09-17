@@ -9,7 +9,7 @@ export const books: Book[] = [
     {
         title: "Atomic Habits",
         author: "James Clear",
-        status: "reading",
+        status: "completed",
         year: 2026
     },
     {
