@@ -7,6 +7,12 @@ export interface Book {
 
 export const books: Book[] = [
     {
+        title: "Central Banking 101",
+        author: "Joseph Wang",
+        status: "reading",
+        year: 2026
+    },
+    {
         title: "Atomic Habits",
         author: "James Clear",
         status: "completed",
