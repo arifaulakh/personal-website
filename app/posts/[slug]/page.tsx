@@ -14,8 +14,8 @@ const getPostContent = (slug: string) => {
     return matterResult;
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const { slug } = params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
     const post = getPostContent(slug);
     const socialImage = post.data.ogImage || post.data.image;
 
@@ -49,8 +49,8 @@ export const generateStaticParams = async () => {
         slug: post.slug,
     }));
 };
-const PostPage = ({ params }: { params: { slug: string } }) => {
-    const slug = params.slug;
+const PostPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+    const { slug } = await params;
     const post = getPostContent(slug);
     
     const options = {
