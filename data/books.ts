@@ -7,8 +7,20 @@ export interface Book {
 
 export const books: Book[] = [
     {
-        title: "Central Banking 101",
-        author: "Joseph Wang",
+        title: "Designing Data-Intensive Applications",
+        author: "Martin Kleppmann",
+        status: "reading",
+        year: 2026
+    },
+    {
+        title: "Inference Engineering",
+        author: "Philip Kiely",
+        status: "reading",
+        year: 2026
+    },
+    {
+        title: "Why Empires Fall",
+        author: "Peter Heather and John Rapley",
         status: "reading",
         year: 2026
     },

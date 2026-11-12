@@ -36,6 +36,12 @@ export default function HomePage() {
       <section className="home-section" id="writing">
         <h2>Posts</h2>
         <div className="text-list">
+          <Link href="/posts/where-do-coding-agents-struggle">
+            Where do coding agents struggle?
+          </Link>
+          <Link href="/posts/what-does-good-technical-judgment-actually-look-like">
+            What does good technical judgment actually look like?
+          </Link>
           <Link href="/posts/reflections-2024">
             Reflecting on 2024 &amp; Looking Ahead to 2025
           </Link>
