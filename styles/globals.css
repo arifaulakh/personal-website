@@ -247,6 +247,7 @@ ul {
 }
 
 .prose {
+  --tw-prose-code: var(--ink);
   color: var(--slate);
 }
 
